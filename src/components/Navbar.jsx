@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ( ) => {
 
     return (
         <div className="navbar">
