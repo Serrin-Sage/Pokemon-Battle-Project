@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import TeamCard from './TeamCard';
 
 const Team = ({ setTeam, team }) => {
     const [ pokemon, setPokemon ] = useState(null);
@@ -19,15 +20,12 @@ const Team = ({ setTeam, team }) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h4>Search for your team!</h4>
+                <h4>Search for your next Pokemon!</h4>
                 <input type="text" name="name"/>
                 <button type="submit">Submit</button>
             </form>
             {!pokemon ? (<div><h1>No Pokemon</h1></div>) : (
-                <div> 
-                    <h1>Name: {pokemon.name}</h1>
-                    <button type="submit" onSubmit={() => setTeam([...team], pokemon)}>Add to Team</button>
-                </div>
+                <TeamCard pokemon={pokemon} />
             )}
         </div>
     )
