@@ -13,7 +13,7 @@ const Battle = () => {
                     <p>Poke 5</p>
                     <p>Poke 6</p>
                 </div>
-                <BattleCard />
+                <BattleCard className={"selected-card"} id={"displayed-team"}/>
             </div>
 
             <div className="battle-area" id="enemy-area">
