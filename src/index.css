@@ -21,6 +21,7 @@ body {
 .header-title {
   margin: auto;
   padding: 1.5rem;
+  cursor: default;
 }
 
 .navbar {
@@ -32,3 +33,28 @@ body {
   align-items: center;
 }
 
+.link-title {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: 22pt;
+  color: white;
+}
+
+.link-title:after {
+  content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom;
+    transition: transform 0.20s ease-out;
+}
+
+.link-title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
