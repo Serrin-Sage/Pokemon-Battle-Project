@@ -19,6 +19,13 @@ const Team = ({ setTeam, team }) => {
 
     return (
         <div>
+            <div>
+                {team.map(pokemon => {
+                    return (
+                        <div></div>
+                    )
+                })}
+            </div>
             <form onSubmit={handleSubmit}>
                 <h4>Search for your next Pokemon!</h4>
                 <input type="text" name="name"/>
