@@ -14,9 +14,9 @@ function App() {
       <Navbar onChangePage={setPage}/>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Team setTeam={setTeam} team={team}/>}/>
-          <Route path='/battle' />
-          <Route path='/store' element={<Store />}/>
+          <Route path={page} element={<Team setTeam={setTeam} team={team}/>}/>
+          <Route path={page} />
+          <Route path={page} element={<Store />}/>
         </Routes>
       </BrowserRouter>
       
