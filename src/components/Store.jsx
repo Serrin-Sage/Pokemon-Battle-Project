@@ -21,7 +21,7 @@ const Store = ({money, setMoney, potionTotal, setPotionTotal}) => {
         <div className="store-container">
             <h1>Welcome to the Store!</h1>
             <h3>You have {money} Monies</h3>
-            <h3>You have {potionTotal} Potions</h3>
+            <h3>You have {potionTotal} Potion(s)</h3>
             <div className="potion-container">
                 <button onClick={() => buyPotion(15)} className="buy-potion">Buy a small potion!</button>
             </div> 
