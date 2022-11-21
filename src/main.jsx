@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import './stylesheets/store-style.css'
+import './stylesheets/team-style.css'
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 

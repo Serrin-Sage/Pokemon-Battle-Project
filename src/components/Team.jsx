@@ -13,27 +13,30 @@ const Team = ({ setTeam, team }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await getPokemon(e.target.name.value);
-        console.log(pokemon);
         e.target.reset();
     }
 
     return (
         <div>
-            <div>
+            <div className="teamDisplay">
                 {team.map(pokemon => {
                     return (
-                        <div></div>
+                        <div className="card" key={pokemon.id}>
+                            <h1>{pokemon.name}</h1>
+                        </div>
                     )
                 })}
             </div>
-            <form onSubmit={handleSubmit}>
-                <h4>Search for your next Pokemon!</h4>
-                <input type="text" name="name"/>
-                <button type="submit">Submit</button>
-            </form>
-            {!pokemon ? (<div><h1>No Pokemon</h1></div>) : (
-                <TeamCard setTeam={setTeam} team={team} pokemon={pokemon} />
-            )}
+            <div className="search">
+                <form onSubmit={handleSubmit}>
+                    <h4>Search for your next Pokemon!</h4>
+                    <input type="text" name="name"/>
+                    <button type="submit">Submit</button>
+                </form>
+                {!pokemon ? (<div><h1>No Pokemon</h1></div>) : (
+                    <TeamCard setTeam={setTeam} team={team} pokemon={pokemon} />
+                )}
+            </div>
         </div>
     )
 }

@@ -1,19 +1,24 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const TeamCard = ({ setTeam, team, pokemon }) => {
+    const errorMessage = () => toast.error('TEAM IS FULL');
+
     const handleSubmit = () => {
         if (team.length >= 5) {
-            const err = document.getElementById('error');
-            err.innerText = 'Team is Full';
+            errorMessage();
         }
         else {
-            setTeam([...team], pokemon)
+            setTeam([...team, pokemon])
+            console.log(team)
         }
     }
 
     return (
-        <div> 
-            <p id="error"></p>
+        <div className="resultCard"> 
+            <ToastContainer />
             <h1>Name: {pokemon.name}</h1>
-            <button type="submit" onSubmit={handleSubmit}>Add to Team</button>
+            <button onClick={handleSubmit}>Add to Team</button>
         </div>
     )
 }
