@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Header from './components/Header'
 import Navbar from './components/Navbar'
+import Store from './components/Store';
 import Team from './components/Team'
+
 function App() {
   const [page, setPage] = useState("/")
   const [ team, setTeam ] = useState([])
@@ -14,8 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Team setTeam={setTeam} team={team}/>}/>
           <Route path='/battle' />
-          
-          <Route path='/store' />
+          <Route path='/store' element={<Store />}/>
         </Routes>
       </BrowserRouter>
       
