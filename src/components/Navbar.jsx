@@ -1,9 +1,14 @@
-const Navbar = () => {
+const Navbar = ({ onChangePage }) => {
+
+    const handleClick = (event) => {
+        event.preventDefault()
+        onChangePage(e.target.pathname)
+    }
     return (
         <div className="navbar">
-            <a href="" className="link-title">Team</a>
-            <a href="" className="link-title">Battle!</a>
-            <a href="" className="link-title">Store</a>
+            <a onClick={handleClick} href="/" className="link-title">Team</a>
+            <a onClick={handleClick} href="/battle" className="link-title">Battle!</a>
+            <a onClick={handleClick} href="store" className="link-title">Store</a>
         </div>
     )
 }
