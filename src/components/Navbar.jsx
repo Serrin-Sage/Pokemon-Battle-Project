@@ -2,6 +2,7 @@ const Navbar = ({ onChangePage }) => {
 
     const handleClick = (event) => {
         event.preventDefault()
+        console.log(event.target.pathname)
         onChangePage(event.target.pathname)
     }
     return (
