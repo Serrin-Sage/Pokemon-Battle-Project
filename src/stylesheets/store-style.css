@@ -1,0 +1,9 @@
+.store-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.store-container h1 {
+    text-decoration: underline;
+}
