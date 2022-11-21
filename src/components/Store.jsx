@@ -35,7 +35,7 @@ const Store = ({money, setMoney, potionTotal, setPotionTotal}) => {
                 pauseOnFocusLoss={false}
                 draggable
                 pauseOnHover
-                toastStyle={{color: "red", height: "200px"}}
+                toastStyle={{color: "red"}}
                  />
         </div>
     )
