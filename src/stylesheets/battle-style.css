@@ -1,0 +1,33 @@
+/* Global Styling */
+.battle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.battle-area {
+    color: white;
+    width: 50%;
+    height: 100%;
+}
+.list-column {
+    padding: 6px;
+}
+
+/* Team Styling */
+#team-area {
+    background-color: aquamarine;
+    
+}
+#team-list {
+    margin-left: 1rem;
+}
+
+/* Enemy Styling */
+#enemy-area {
+    background-color: rgb(255, 73, 73);
+    
+}
+#enemy-list {
+    text-align: right;
+    margin-right: 1rem;
+}
