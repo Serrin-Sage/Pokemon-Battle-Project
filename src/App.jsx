@@ -7,6 +7,8 @@ import Team from './components/Team'
 
 function App() {
   const [ team, setTeam ] = useState([])
+  const [potionTotal, setPotionTotal] = useState(0)
+  const [money, setMoney] = useState(20)
   return (
     <div className="App">
       <Header />
@@ -14,7 +16,7 @@ function App() {
         <Routes>
           <Route path={'/'} element={<Team setTeam={setTeam} team={team}/>}/>
           <Route path={'/about'} />
-          <Route path={'/store'} element={<Store />}/>
+          <Route path={'/store'} element={<Store money={money} setMoney={setMoney} potionTotal={potionTotal} setPotionTotal={setPotionTotal}/>}/>
         </Routes>
       
    </div>
