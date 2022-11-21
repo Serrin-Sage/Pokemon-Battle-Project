@@ -1,15 +1,12 @@
-const Navbar = ({ onChangePage }) => {
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-    const handleClick = (event) => {
-        event.preventDefault()
-        console.log(event.target.pathname)
-        onChangePage(event.target.pathname)
-    }
+const Navbar = () => {
+
     return (
         <div className="navbar">
-            <a onClick={handleClick} href="/" className="link-title">Team</a>
-            <a onClick={handleClick} href="/battle" className="link-title">Battle!</a>
-            <a onClick={handleClick} href="/store" className="link-title">Store</a>
+            <Link to={'/'} className="link-title">Team</Link>
+            <Link to={'/battle'} className="link-title">Battle!</Link>
+            <Link to={'/store'} className="link-title">Store</Link>
         </div>
     )
 }

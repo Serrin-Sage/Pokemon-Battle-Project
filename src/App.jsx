@@ -6,19 +6,16 @@ import Store from './components/Store';
 import Team from './components/Team'
 
 function App() {
-  const [page, setPage] = useState("/")
   const [ team, setTeam ] = useState([])
   return (
     <div className="App">
       <Header />
-      <Navbar onChangePage={setPage}/>
-      <BrowserRouter>
+      <Navbar />
         <Routes>
-          <Route path={page} element={<Team setTeam={setTeam} team={team}/>}/>
-          <Route path={page} />
-          <Route path={page} element={<Store />}/>
+          <Route path={'/'} element={<Team setTeam={setTeam} team={team}/>}/>
+          <Route path={'/about'} />
+          <Route path={'/store'} element={<Store />}/>
         </Routes>
-      </BrowserRouter>
       
    </div>
   );
