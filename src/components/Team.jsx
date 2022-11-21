@@ -25,7 +25,7 @@ const Team = ({ setTeam, team }) => {
                 <button type="submit">Submit</button>
             </form>
             {!pokemon ? (<div><h1>No Pokemon</h1></div>) : (
-                <TeamCard pokemon={pokemon} />
+                <TeamCard setTeam={setTeam} team={team} pokemon={pokemon} />
             )}
         </div>
     )
