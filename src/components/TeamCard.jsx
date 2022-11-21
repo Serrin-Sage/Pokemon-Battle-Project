@@ -1,24 +1,20 @@
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-const TeamCard = ({ setTeam, team, pokemon }) => {
-    const errorMessage = () => toast.error('TEAM IS FULL');
-
-    const handleSubmit = () => {
-        if (team.length >= 5) {
-            errorMessage();
-        }
-        else {
-            setTeam([...team, pokemon])
-            console.log(team)
-        }
+const TeamCard = ({ index, team, setTeam, pokemon, pk }) => {
+    const handleClick = () => {
+        const newTeam = [...team]
+        newTeam[index] = pokemon
+        setTeam(newTeam)
     }
-
+    const handleDelete =() => {
+        const newTeam = [...team]
+        newTeam[index] = null
+        setTeam(newTeam)
+    }
     return (
-        <div className="resultCard"> 
-            <ToastContainer />
-            <h1>Name: {pokemon.name}</h1>
-            <button onClick={handleSubmit}>Add to Team</button>
+        <div className="card">
+            <button className="cardDelete" onClick={handleDelete}>X</button>
+            <h1>{pk.name}</h1>
+            <img src={pk.sprites.front_default} placeholder="no image found"></img>
+            <button onClick={handleClick}>Replace</button>
         </div>
     )
 }

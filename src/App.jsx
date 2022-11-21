@@ -6,7 +6,7 @@ import Store from './components/Store';
 import Team from './components/Team'
 
 function App() {
-  const [ team, setTeam ] = useState([])
+  const [ team, setTeam ] = useState([null, null, null, null, null, null])
   const [potionTotal, setPotionTotal] = useState(0)
   const [money, setMoney] = useState(20)
   return (

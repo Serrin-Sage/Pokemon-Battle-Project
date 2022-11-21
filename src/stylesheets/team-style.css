@@ -1,9 +1,19 @@
 .card {
     border: 2px solid black;
     width: 10rem;
+    height: 15rem;
+    margin: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
+    border-radius: 10%;
+}
+.cardDelete {
+    border-style: none;
+    background: none;
+    position: relative;
 }
 .search {
     display: flex;
