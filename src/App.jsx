@@ -16,7 +16,7 @@ function App() {
       <Navbar />
         <Routes>
           <Route path={'/'} element={<Team setTeam={setTeam} team={team}/>}/>
-          <Route path={'/battle'} element={<Battle />}/>
+          <Route path={'/battle'} element={<Battle team={team}/>}/>
           <Route path={'/store'} element={<Store money={money} setMoney={setMoney} potionTotal={potionTotal} setPotionTotal={setPotionTotal}/>}/>
         </Routes>
       
