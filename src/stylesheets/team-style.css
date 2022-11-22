@@ -53,6 +53,7 @@
     background: none;
     position: relative;
     transition: all 0.5s ease-out;
+    margin: 2px;
 }
 .cardUpdate {
     background: rgb(73, 189, 73);
