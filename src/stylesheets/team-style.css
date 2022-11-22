@@ -9,11 +9,32 @@
     text-align: center;
     align-items: center;
     border-radius: 10%;
+    box-shadow: 5px 5px 5px red;
+    background: white;
+    transition: all 0.5s ease-out;
 }
-.cardDelete {
-    border-style: none;
+.card h1, .card h2{
+    margin: 0;
+    padding: 0;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.cardUpdate, .cardDelete {
+    border-style: 2px solid black;
+    border-radius: 10px;
     background: none;
     position: relative;
+    transition: all 0.5s ease-out;
+}
+.cardUpdate {
+    background: rgb(73, 189, 73);
+}
+.cardDelete {
+    background: #ff0800;
+}
+.cardUpdate:hover, .cardDelete:hover {
+    transform: scale(1.05);
 }
 .search {
     display: flex;
@@ -22,7 +43,7 @@
 }
 .teamDisplay {
     display: flex;
-    flex-direction: row;
+    flex-direction: wrap;
     justify-content: center;
 }
 .resultCard {

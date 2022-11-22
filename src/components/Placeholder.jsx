@@ -7,7 +7,7 @@ const Placeholder = ({ team, setTeam, index, pokemon}) => {
     return (
         <div className="card">
             <h1>Add Pokemon!</h1>
-            <button onClick={handleClick}>+</button>
+            <button className="cardUpdate" onClick={handleClick}>Add</button>
         </div>
     )
 }
