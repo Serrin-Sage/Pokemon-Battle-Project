@@ -13,6 +13,33 @@
     background: white;
     transition: all 0.5s ease-out;
 }
+.displayCard {
+    border: 2px solid black;
+    width: 20rem;
+    height: 14rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px red;
+    background: white;
+    transition: all 0.5s ease-out;
+}
+.displayCard h1, h2, h3, h4 {
+    margin: 5px;
+    padding: 0;
+}
+.displayCard table {
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .card h1, .card h2{
     margin: 0;
     padding: 0;
@@ -35,6 +62,18 @@
 }
 .cardUpdate:hover, .cardDelete:hover {
     transform: scale(1.05);
+}
+.input {
+    background: white;
+    border-style: 2px solid black;
+    border-radius: 8px;
+    height: 1.5rem;
+}
+.submit {
+    background: rgb(96, 200, 96);
+    border-style: 2px solid black;
+    border-radius: 8px;
+    height: 1.75rem;
 }
 .search {
     display: flex;
