@@ -9,7 +9,7 @@ import Battle from './components/Battle';
 function App() {
   const [ team, setTeam ] = useState([null, null, null, null, null, null])
   const [potionTotal, setPotionTotal] = useState(0)
-  const [money, setMoney] = useState(20)
+  const [money, setMoney] = useState(1000)
   return (
     <div className="App">
       <Header />
